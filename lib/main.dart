@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:trivia_app/quizz.dart';
 
+import 'colors.dart';
+
 void main() {
-  runApp(Login());
+  runApp(const Login());
 }
 
 class Login extends StatelessWidget {
@@ -12,7 +14,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Trivia",
-      theme: ThemeData(primarySwatch: Colors.blueGrey),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const LoginView()
     );
   }
@@ -35,7 +37,7 @@ class _LoginViewState extends State<LoginView> {
       appBar: AppBar(
         title: const Text("Login"),
       ),
-        backgroundColor: Colors.white,
+        backgroundColor: colorBlueBack,
       body: ListView(
         children: [
           Container(
@@ -47,7 +49,6 @@ class _LoginViewState extends State<LoginView> {
               ),
               style: const TextStyle(
                 fontSize: 20,
-                fontFamily: 'bold'
               ),
             ),
           ),
@@ -56,13 +57,12 @@ class _LoginViewState extends State<LoginView> {
               alignment: Alignment.center,
               child: RaisedButton(
                 padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-                color: Colors.redAccent,
+                color: colorBlueButton,
                 textColor: Colors.white,
                 child: const Text(
                   'Let´s go!',
                   style: TextStyle(
                     fontSize: 18,
-                    fontFamily: 'rbold'
                   ),
                 ),
                 onPressed: (){
